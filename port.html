@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li><br>
+                <li><a href="#about">About</a></li><br>
+                <li><a href="#projects">Projects</a></li><br>
+                <li><a href="#contact">Contact</a></li><br>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Guna Satya Murari, a passionate cybersecurity student.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img 
+    src="https://media.licdn.com/dms/image/v2/D4E03AQH5hz3dgkx_Vw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1695127678569?e=2147483647&v=beta&t=vY4s2IUsVaCc51KFIlSQF7L3n4ZCL092YgKHIqEprrA" 
+    alt="Profile Picture" 
+    class="profile-pic" 
+    style="margin-left: 200px;">
+
+            <p>I'm Guna Satya Murari, a dedicated cybersecurity student with a passion for securing digital systems and networks. I enjoy learning about the latest security trends and solving real-world challenges related to data protection and network security.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <img src="https://f.hubspotusercontent40.net/hubfs/4650993/Blog_Content/Avg/Signal/AVG%20Signal%20Images/Keyloggers%20What%20They%20Are/What_is_a_Keylogger-Thumb.jpg" alt="Project 1">
+                <h3>KEY LOGGER</h3>
+                <p>A keylogger project typically involves building a tool that can track and record keystrokes on a system. In the context of a portfolio, it's important to present the project in a responsible and ethical manner, emphasizing the learning experience and the technical skills involved rather than malicious intent.</p>
+                <a href="https://github.com/murariguna/BCYBER/blob/main/Keylogger.py" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://s22908.pcdn.co/wp-content/uploads/2018/06/what-is-bruteforce-1.jpg" alt="Project 2">
+                <h3>passwordcrack(Brute Force)</h3>
+                <p>A Password Cracker (Brute Force) project is another common project in the field of cybersecurity, often used for educational purposes to demonstrate the weaknesses in password security and to promote stronger password practices. It’s important to note that, like with keyloggers, you should emphasize ethical use and responsible behavior when discussing or presenting this project in your portfolio.</p>
+                <a href="https://github.com/murariguna/BCYBER/blob/main/passwordcrack(Brute%20Force).py" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-KnqoXWO9U2qUH8Jm64rPpEbtd6bQRKbmw&s" alt="Project 3">
+                <h3>stenography</h3>
+                <p>This project focuses on creating a Steganography Tool that allows users to securely hide secret messages and files within image files. By encoding sensitive data into the least significant bits (LSB) of an image, the tool ensures that the hidden information remains invisible to the naked eye, providing a method for secure communication and data transmission. This technique allows for the safe transmission of confidential information without raising suspicion. The tool also provides a mechanism to retrieve the hidden data accurately, ensuring that integrity and confidentiality are maintained. The project demonstrates how steganography can be used to protect data from unauthorized access, even in situations where traditional encryption might not be feasible.</p>
+                <a href="https://github.com/murariguna/BCYBER/blob/main/stenography.py" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="error.html" method="post" id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+           
+            <a href="https://in.linkedin.com/in/gunasatyamurari" target="_blank"><i class="fab fa-linkedin"></i></a>
+ <a href="https://github.com/murariguna" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Guna Satya Murari. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill out all fields');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
