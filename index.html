@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terminal Portfolio</title>
+
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="boot-screen">
+        <pre id="boot-text">
+[  OK  ] Starting system manager v1.0.3
+[  OK  ] Kernel compatibility check: passed (checksum 0x7fa3b2)
+[  OK  ] Initializing terminal subsystem...
+[  OK  ] Loading font: JetBrainsMono v2.0
+[  OK  ] Mounting virtual filesystem: /portfolio
+[  OK  ] Loading ASCII banner from assets/ascii/banner.txt
+[  OK  ] Initializing input device: virtual_keyboard
+[  OK  ] Command completion index: built (17 commands)
+[  OK  ] Network: loopback (127.0.0.1) — ready
+[ INFO ] Tip: type 'help' to see available commands
+Welcome.
+
+        </pre>
+    </div>
+
+    <div id="terminal-wrapper" class="hidden">
+        <div id="terminal">
+
+            <pre id="ascii-banner"></pre>
+
+            <div id="output"></div>
+
+            <div id="input-line">
+                <span class="prompt" id="prompt">murari@portfolio:~$</span>
+                <input id="terminal-input" type="text" autocomplete="off" autofocus />
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
