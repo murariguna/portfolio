@@ -531,25 +531,15 @@ resume: async () => {
 
 async function bootSequence() {
   await wait(1600);
-
-  if (bootScreen) {
-    bootScreen.classList.add("hidden");
-    setTimeout(() => {
-      if (bootScreen && bootScreen.parentNode) {
-        bootScreen.style.display = "none";
-      }
-    }, 300);
-  }
-
-  if (terminalWrap) {
-    terminalWrap.classList.remove("hidden");
-  }
-
-  if (asciiBanner) asciiBanner.textContent = ASCII;
+  bootScreen.remove();   
+  terminalWrap.classList.remove("hidden");
+  asciiBanner.textContent = ASCII;
+  printLine("System ready. Type 'help' to begin.", "notice");
+  printLine("");
+  await COMMANDS.help();
 
   focusInput();
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   bootSequence();
 
@@ -586,3 +576,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
